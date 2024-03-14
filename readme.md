@@ -23,12 +23,14 @@ Para a criação deste projeto foram utilizadas as seguintes tecnologias e frame
 
 ### Executando local
 
-Iniciar o banco de dados:
+1. Iniciar o banco de dados:
 ```sh
 docker-compose up -d
 ```
 
-Para executar o projeto localmente basta executar o seguinte comando:
+2. Criar o arquivo .env de acordo com o arquivo .env.example
+
+3. Para executar o projeto localmente basta executar o seguinte comando:
 
 ```sh
 npm i
