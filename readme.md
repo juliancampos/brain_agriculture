@@ -13,10 +13,11 @@ Para a criação deste projeto foram utilizadas as seguintes tecnologias e frame
 
 - [node.js] - Plataforma de desenvolvimento
 - [Express] - Web framework minimalista desenvolvido em node.js
-- [Docker] - Plataforma de deploy
-- [Joi] - Plataforma de monitoramento 
-- [Dotenv] - Integração contínua
-- [Prisma] - Integração contínua
+- [Docker] - Plataforma de virtualização de sistemas operacionais
+- [Joi] - Biblioteca para validação de dados 
+- [Dotenv] - Biblioteca para configuração de variáveis de ambiente
+- [Prisma] - Biblioteca para interação com o banco de dados
+- [Winston] - Biblioteca para padronização de log
 
 ## Instalação e execução da aplicação
 
