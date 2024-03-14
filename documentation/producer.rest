@@ -1,11 +1,11 @@
 @url = http://localhost:3000
 @producerId = 3
 
-### Lista todos os produtores
+### Listar todos os produtores
 GET {{url}}/producers
 Content-Type: application/json
 
-### Cria um produtor e uma fazenda
+### Criar um produtor
 POST {{url}}/producers
 Content-Type: application/json
 
@@ -13,11 +13,10 @@ Content-Type: application/json
   "name": "Julian Campos",
   "type": "Pessoa Fisica",
   "documentType": "CPFF",
-  "documentNumber": "065.054.646-62"
+  "documentNumber": "711.408.470-66"
 }
 
-####
-
+#### Criar um produtor e uma fazenda
 POST {{url}}/producers
 Content-Type: application/json
 
@@ -36,14 +35,14 @@ Content-Type: application/json
   }
 }
 
-##### Atualiza um produtor
+##### Atualizar um produtor
 PUT {{url}}/producer/{{producerId}}
 Content-Type: application/json
 
 {
-  "name": "Marina Mendes"
+  "name": "Julian Oliveira Campos"
 }
 
-##### Exclui um produtor
+##### Excluir um produtor
 DELETE {{url}}/producer/{{producerId}}
 Content-Type: application/json

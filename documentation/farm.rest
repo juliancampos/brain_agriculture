@@ -1,11 +1,11 @@
 @url = http://localhost:3000
 @farmId = 3
 
-### Lista todas as fazenda
+### Lista todas as fazendas
 GET {{url}}/farms
 Content-Type: application/json
 
-### Cria uma fazenda
+### Criar uma fazenda
 POST {{url}}/farms
 Content-Type: application/json
 
@@ -19,7 +19,7 @@ Content-Type: application/json
   "cultivation": ["milho"]
 }
 
-### Atualizada uma fazenda
+### Atualizar dados de uma fazenda
 PUT {{url}}/farm/{{farmId}}
 Content-Type: application/json
 
@@ -28,15 +28,7 @@ Content-Type: application/json
 }
 
 
-###
-PUT {{url}}/farm/{{farmId}}
-Content-Type: application/json
-
-{
-  "cultivation": "cenoura"
-}
-
-### Altera o produtor relacionado a uma fazenda 
+### Alterar o produtor relacionado a uma fazenda 
 PUT {{url}}/farm/{{farmId}}/producer
 Content-Type: application/json
 
@@ -44,6 +36,6 @@ Content-Type: application/json
   "producerId": "66"
 }
 
-##### Exclui uma fazenda
+##### Excluir uma fazenda
 DELETE {{url}}/farm/{{farmId}}
 Content-Type: application/json
