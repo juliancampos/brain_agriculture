@@ -63,6 +63,10 @@ npm start
 
 ## Endpoints da api
 
+A pasta documentation contém as rotas com exemplos de requisição.
+
+Sugestão: utilização do plugin "Rest Api" para enviar requisições
+
 #### /producers
 - Criar o registro de um produtor
 - Listar todos os produtores
