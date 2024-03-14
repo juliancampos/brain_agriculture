@@ -1,0 +1,49 @@
+@url = http://localhost:3000
+@farmId = 3
+
+### Lista todas as fazenda
+GET {{url}}/farms
+Content-Type: application/json
+
+### Cria uma fazenda
+POST {{url}}/farms
+Content-Type: application/json
+
+{
+  "name": "Fazend 3",
+  "city": "Caeté",
+  "state": "Minas Gerais",
+  "totalArea": "42",
+  "productiveArea": "22",
+  "vegetationArea": "20",
+  "cultivation": ["milho"]
+}
+
+### Atualizada uma fazenda
+PUT {{url}}/farm/{{farmId}}
+Content-Type: application/json
+
+{
+  "name": "fazenda 33"
+}
+
+
+###
+PUT {{url}}/farm/{{farmId}}
+Content-Type: application/json
+
+{
+  "cultivation": "cenoura"
+}
+
+### Altera o produtor relacionado a uma fazenda 
+PUT {{url}}/farm/{{farmId}}/producer
+Content-Type: application/json
+
+{
+  "producerId": "66"
+}
+
+##### Exclui uma fazenda
+DELETE {{url}}/farm/{{farmId}}
+Content-Type: application/json

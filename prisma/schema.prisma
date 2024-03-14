@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Producer {
+  id  Int @default(autoincrement()) @id
+  documentType String
+  documentNumber String @unique
+  name  String
+  farms Farm[]
+  createdAt DateTime?
+  updatedAt DateTime?
+}
+
+model Farm {
+  id  Int @default(autoincrement()) @id
+  name  String
+  city  String
+  state String
+  totalArea Float
+  productiveArea Float
+  vegetationArea Float
+  producer  Producer? @relation(fields: [producerId], references: [id], onDelete: Cascade)
+  producerId  Int?
+  cultivation String[]
+  createdAt DateTime?
+  updatedAt DateTime?
+}

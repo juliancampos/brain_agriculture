@@ -1,0 +1,49 @@
+@url = http://localhost:3000
+@producerId = 3
+
+### Lista todos os produtores
+GET {{url}}/producers
+Content-Type: application/json
+
+### Cria um produtor e uma fazenda
+POST {{url}}/producers
+Content-Type: application/json
+
+{
+  "name": "Julian Campos",
+  "type": "Pessoa Fisica",
+  "documentType": "CPFF",
+  "documentNumber": "065.054.646-62"
+}
+
+####
+
+POST {{url}}/producers
+Content-Type: application/json
+
+{
+  "name": "Julian",
+  "documentType": "CPF",
+  "documentNumber": "065.054.646-62",
+  "farm": {
+    "name": "Fazend 2",
+    "city": "Igarape",
+    "state": "Minas Gerais",
+    "totalArea": "53",
+    "productiveArea": "33",
+    "vegetationArea": "20",
+    "cultivation": ["feijão"]
+  }
+}
+
+##### Atualiza um produtor
+PUT {{url}}/producer/{{producerId}}
+Content-Type: application/json
+
+{
+  "name": "Marina Mendes"
+}
+
+##### Exclui um produtor
+DELETE {{url}}/producer/{{producerId}}
+Content-Type: application/json

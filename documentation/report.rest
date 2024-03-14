@@ -1,0 +1,5 @@
+@url = http://localhost:3000
+
+### Busca dados para relatório
+GET {{url}}/report
+Content-Type: application/json
